@@ -1,0 +1,79 @@
+.bg-wrap {
+  position: fixed;
+  z-index: -1000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &.dotted {
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+  }
+
+  .logo {
+    width: 500px;
+  }
+}
+
+svg {
+
+  polygon {
+    stroke-dasharray: 17;
+    animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 136;
+    }
+  }
+
+  text {
+    font-family: Orbitron, sans-sarif;
+    font-size: 5px;
+    stroke-width: 2px;
+    width: 100%;
+    height: 100%;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: text-animation 3s ease-in-out forwards infinite;
+  }
+
+  @keyframes text-animation {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+
+    70% {
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}

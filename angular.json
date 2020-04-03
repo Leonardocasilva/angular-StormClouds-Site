@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "StormClouds-Site"
+    }
+  },
+  "defaultProject": "StormClouds-Site",
+  "cli": {
+    "analytics": "694f96bf-3b3b-464e-82c4-bf1a7799dd9c"
+  }
 }
